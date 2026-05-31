@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+
+# VS Code local settings
+.vscode/
+
+# SQLite databases
+*.sqlite
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db

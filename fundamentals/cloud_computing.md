@@ -1,4 +1,4 @@
-# 1 - Cloud Computing
+# Cloud Computing
 
 ## What is Cloud Computing?
 
@@ -87,7 +87,7 @@ Benefits:
 
 ---
 
-## Points of Presence (Edge Locations)
+## Edge Locations
 
 Edge Locations are sites located closer to end users.
 
@@ -103,32 +103,3 @@ Example:
 If a user in São Paulo accesses a website hosted in the United States, CloudFront can serve cached content from a nearby Edge Location instead of retrieving it from the original server every time.
 
 ---
-
-## Shared Responsibility Model
-
-AWS follows a Shared Responsibility Model.
-
-![Responsabilidade Compartilhada](images/responsabilidade-compartilhada.png)
-
-### AWS is responsible for:
-
-(Security OF the Cloud)
-
-* Physical security of data centers
-* Hardware
-* Networking infrastructure
-* Global cloud infrastructure
-
-### Customers are responsible for:
-
-(Security IN the Cloud)
-
-* Managing user access and permissions
-* Protecting data
-* Configuring services correctly
-* Operating systems (in some services)
-* Applications and customer content
-
-### Key Idea
-
-AWS secures the cloud infrastructure, while customers are responsible for securing what they put in the cloud.

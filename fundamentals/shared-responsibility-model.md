@@ -6,16 +6,12 @@ AWS follows a Shared Responsibility Model.
 
 ## AWS is responsible for:
 
-(Security OF the Cloud)
-
 * Physical security of data centers
 * Hardware
 * Networking infrastructure
 * Global cloud infrastructure
 
 ## Customers are responsible for:
-
-(Security IN the Cloud)
 
 * Managing user access and permissions
 * Protecting data
