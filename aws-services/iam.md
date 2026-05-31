@@ -18,13 +18,13 @@ IAM is a Global Service, meaning it is not tied to a specific AWS Region.
 
 ### Users
 
-An IAM User represents a person or application that needs access to AWS.
+An IAM User represents a person who needs access to AWS.
 
 Examples:
 
 * Ingrid
 * A developer
-* An application
+* An administrator
 
 Each user can have:
 
@@ -100,6 +100,73 @@ Benefits:
 
 * More secure than storing access keys
 * Temporary credentials
+* Recommended for applications and AWS services
+
+---
+
+## Accessing AWS
+
+AWS resources can be accessed in different ways.
+
+### AWS Management Console
+
+The AWS Management Console is a web-based interface used to manage AWS services through a graphical interface.
+
+Best for:
+
+* Beginners
+* Learning AWS services
+* Manual administration
+
+Authentication:
+
+* Username and password
+* MFA (recommended)
+
+---
+
+### AWS CLI (Command Line Interface)
+
+The AWS CLI allows users to interact with AWS services through commands in a terminal.
+
+Example:
+
+```bash
+aws s3 ls
+```
+
+Best for:
+
+* Automation
+* Scripting
+* Managing resources from the command line
+
+Authentication:
+
+* Access Key ID
+* Secret Access Key
+* IAM Roles
+
+---
+
+### AWS SDKs
+
+AWS Software Development Kits (SDKs) allow applications to interact with AWS services using programming languages such as Python, Java, JavaScript, and C#.
+
+Example:
+
+A Python application uploading files to Amazon S3.
+
+Best for:
+
+* Application development
+* System integrations
+* Automated workloads
+
+Authentication:
+
+* Access Keys
+* IAM Roles
 
 ---
 
@@ -110,6 +177,7 @@ Benefits:
 Grant only the permissions required to perform a task.
 
 Example:
+
 If a user only needs to read data from S3, do not grant delete permissions.
 
 ---
@@ -149,26 +217,62 @@ This reduces security risks.
 
 ---
 
-## Key Concepts
+## Common Use Cases
+
+* Managing employee access to AWS
+* Controlling permissions for AWS services
+* Granting temporary access through Roles
+* Securing access with MFA
+* Enforcing least-privilege permissions
+
+---
+
+## Related Services
+
+* S3
+* EC2
+* Lambda
+* Organizations
+* AWS Identity Center
+
+IAM is often the first service configured because it controls access to all other AWS services.
+
+---
+
+## Tips
 
 * IAM is a Global Service.
-* IAM manages authentication and authorization.
-* Users are individuals.
-* Groups contain users.
-* Policies define permissions.
-* Roles provide temporary access.
-* MFA increases account security.
+* Never use the root account for daily activities.
+* Enable MFA whenever possible.
 * Follow the Principle of Least Privilege.
-* Avoid using the root account for daily work.
+* Roles provide temporary credentials.
+* Applications should use IAM Roles instead of storing access keys.
+* Groups contain users, but groups cannot contain other groups.
 
 ---
 
 ## Quick Summary
 
-| Component | Purpose                            |
-| --------- | ---------------------------------- |
-| User      | Represents a person or application |
-| Group     | Collection of users                |
-| Policy    | Defines permissions                |
-| Role      | Temporary access                   |
-| MFA       | Additional security layer          |
+| Component | Purpose                                     |
+| --------- | ------------------------------------------- |
+| User      | Represents a person who needs access to AWS |
+| Group     | Collection of users                         |
+| Policy    | Defines permissions                         |
+| Role      | Temporary access                            |
+| MFA       | Additional security layer                   |
+| Console   | Web interface for managing AWS              |
+| CLI       | Command-line access to AWS                  |
+| SDK       | Programmatic access through code            |
+
+### Key Takeaways
+
+* IAM manages authentication and authorization.
+* IAM is a Global Service.
+* Users represent people.
+* Groups simplify permission management.
+* Policies define what actions are allowed or denied.
+* Roles provide temporary credentials.
+* MFA improves security.
+* Follow the Principle of Least Privilege.
+* Use the root account only when necessary.
+* AWS can be accessed through the Console, CLI, or SDKs.
