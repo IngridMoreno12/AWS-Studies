@@ -149,6 +149,30 @@ Authentication:
 
 ---
 
+### AWS CloudShell
+
+AWS CloudShell is a browser-based shell that provides a pre-authenticated command-line environment for AWS.
+
+Best for:
+
+* Quick AWS CLI access without installing local tools
+* Learning and experimentation
+* Running one-off commands from any browser
+* Using in environments where local CLI setup is not available
+
+Authentication:
+
+* Uses the IAM permissions of the signed-in console user
+* No access keys needed in the shell session
+
+Benefits:
+
+* Pre-authenticated AWS CLI access
+* Temporary shell environments stored in the cloud
+* Easy access from anywhere with a browser
+
+---
+
 ### AWS SDKs
 
 AWS Software Development Kits (SDKs) allow applications to interact with AWS services using programming languages such as Python, Java, JavaScript, and C#.
@@ -214,6 +238,26 @@ Regularly rotate:
 * Access keys
 
 This reduces security risks.
+
+---
+
+### IAM Security Tools
+
+AWS offers IAM-focused security tools to help validate access, analyze permissions, and detect risky configurations.
+
+Examples:
+
+* IAM Access Analyzer - analyzes policies and identifies resources shared with external entities.
+* IAM Policy Simulator - tests policies to see which permissions are granted without making changes.
+* IAM Last Accessed - shows service usage by users, groups, and roles to help remove unused permissions.
+* IAM Credential Report - provides a credentials report for all IAM users to review passwords, access keys, and MFA status.
+
+Why use them:
+
+* Verify and correct policies proactively.
+* Detect excessive permissions or unexpected access.
+* Identify old or unused credentials.
+* Improve IAM security without impacting users.
 
 ---
 
